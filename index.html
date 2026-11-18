@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#28133f" />
+  <title>For Basana, My Madam Ji ♡</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+    :root{--pink:#ff8fbd;--rose:#ffb6d2;--purple:#a78bfa;--deep:#1b102c;--glass:rgba(255,255,255,.09);--line:rgba(255,255,255,.16)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;color:#fff;font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 15% 10%,#65336f 0,transparent 38%),radial-gradient(ellipse at 85% 30%,#482b78 0,transparent 40%),linear-gradient(145deg,#170f29,#28143c 55%,#171027);min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.23;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:38px 38px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+    .glow{position:fixed;width:300px;height:300px;border-radius:50%;filter:blur(90px);opacity:.2;pointer-events:none;z-index:-1}.g1{background:#ff6cae;top:15%;left:-150px}.g2{background:#9164ff;right:-160px;top:55%}
+    .wrap{width:min(100% - 36px,960px);margin:auto}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;color:#f8dce9;font-size:.88rem}
+    .brand{font-weight:700;letter-spacing:.08em}.tiny-heart{color:var(--pink)}
+    .hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:55px 0 70px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--glass);padding:9px 15px;border-radius:99px;color:#f9d8e9;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+    h1,h2,.letter-title{font-family:'Playfair Display',serif;font-weight:600}
+    h1{font-size:clamp(2.8rem,8vw,5.8rem);line-height:1.04;margin:25px 0 18px;letter-spacing:-.04em}
+    .gradient{background:linear-gradient(90deg,#ffd1e3,#ff8fbd 48%,#c5a9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .sub{max-width:590px;margin:0 auto;color:#e4d7ee;line-height:1.8;font-size:1.02rem}
+    .btn{border:0;border-radius:999px;padding:14px 23px;font:600 .95rem 'DM Sans';cursor:pointer;transition:.2s;display:inline-flex;justify-content:center;align-items:center;gap:9px;text-decoration:none}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.primary{background:linear-gradient(100deg,#ff91bc,#b28bff);color:#291637;box-shadow:0 10px 35px #df7ab344}.ghost{background:var(--glass);border:1px solid var(--line);color:white}
+    .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+    .scroll{margin-top:55px;color:#cbb8d9;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+    section{padding:58px 0}
+    .section-head{text-align:center;margin-bottom:28px}.kicker{color:var(--pink);text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700}
+    h2{font-size:clamp(2rem,5vw,3.2rem);margin:10px 0;color:#fff}.muted{color:#d3c4df;line-height:1.75}
+    .card{background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.045));border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 60px #08041133;backdrop-filter:blur(14px)}
+    .letter-card{max-width:720px;margin:auto;padding:clamp(22px,5vw,42px);position:relative;overflow:hidden}
+    .letter-card:after{content:"♡";position:absolute;right:18px;top:-38px;font-size:180px;color:#ffacd0;opacity:.07;pointer-events:none}
+    .letter-title{font-size:2rem;color:#ffd1e3;margin:0 0 18px}.letter-text{color:#eee3f3;line-height:1.95;white-space:pre-line}
+    .signature{font-family:'Playfair Display',serif;font-style:italic;color:#ffb6d2;font-size:1.3rem;margin-top:22px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .photo{min-height:230px;position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line);background:linear-gradient(145deg,#51345f,#302044);display:grid;place-items:center}
+    .photo img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0;display:none}.photo.has-image img{display:block}.photo.has-image .placeholder{display:none}
+    .placeholder{text-align:center;padding:20px;color:#e7cfe7}.placeholder b{display:block;font-size:2rem;margin-bottom:8px;color:#ffb6d2}.photo small{display:block;color:#c9b6d5;margin-top:7px}
+    .upload-note{text-align:center;color:#cdbed9;font-size:.85rem;margin:17px 0 0}
+    .upload-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px}
+    input[type=file]{display:none}
+    .timeline{max-width:680px;margin:auto;display:grid;gap:13px}
+    .moment{padding:19px 22px;display:flex;gap:15px;align-items:flex-start}.moment-icon{font-size:1.4rem}.moment strong{display:block;margin-bottom:5px;color:#ffe0ec}.moment p{margin:0;color:#d7c9e1;line-height:1.6;font-size:.92rem}
+    .code-card{max-width:680px;margin:auto;padding:24px;overflow:hidden}.terminal-top{display:flex;gap:7px;padding-bottom:17px;border-bottom:1px solid var(--line);margin-bottom:17px}.dot{width:9px;height:9px;border-radius:50%;background:#ff8fae}.dot:nth-child(2){background:#ffd27e}.dot:nth-child(3){background:#8ee3bb}
+    .code{font: .88rem/2 'Courier New',monospace;color:#e7d9f2;overflow-wrap:anywhere}.code .pink{color:#ff9fc5}.code .lav{color:#c6adff}.cursor{display:inline-block;width:8px;height:16px;background:#ff9fc5;vertical-align:middle;animation:blink 1s steps(2) infinite}@keyframes blink{50%{opacity:0}}
+    .proposal{text-align:center;padding:clamp(28px,6vw,60px);position:relative;overflow:hidden}.big-heart{font-size:3.8rem;animation:beat 1.4s infinite}@keyframes beat{50%{transform:scale(1.14)}}
+    .proposal h2{font-size:clamp(2.3rem,7vw,4.4rem);line-height:1.15}.proposal p{max-width:530px;margin:0 auto 25px}.answer-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.yes{font-size:1.05rem;padding:16px 31px}.no{position:relative}
+    #response{display:none;margin:25px auto 0;padding:18px;border-radius:18px;background:#ffb5d21c;border:1px solid #ffb5d266;max-width:520px;color:#ffe4ef;line-height:1.7}
+    footer{text-align:center;padding:35px 0 45px;color:#c9b8d6;font-size:.82rem}
+    .heart-float{position:fixed;bottom:-30px;z-index:5;pointer-events:none;animation:rise 5s linear forwards;opacity:.9}@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+    .confetti{position:fixed;top:-15px;width:8px;height:13px;z-index:9;pointer-events:none;animation:fall 3.2s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+    @media(max-width:650px){.wrap{width:min(100% - 28px,960px)}nav{padding:17px 0}.hero{min-height:75vh;padding:45px 0}.gallery{grid-template-columns:1fr;gap:12px}.photo{min-height:270px}.moment{padding:17px}.code-card{padding:18px}.scroll{margin-top:42px}section{padding:45px 0}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap">
+    <nav><div class="brand">A LITTLE SOMETHING <span class="tiny-heart">♥</span></div><div>made with love, just for you, Madam Ji</div></nav>
+    <main>
+      <header class="hero">
+        <div>
+          <div class="eyebrow">✦ a tiny surprise from miles away ✦</div>
+          <h1>To my favourite<br><span class="gradient">Madam Ji.</span></h1>
+          <p class="sub">Basana, distance may keep us in different places, but it has never changed where you live in my heart. I made this little corner of the internet just for you. ♡</p>
+          <div class="hero-actions"><a class="btn primary" href="#letter">Open your surprise <span>♡</span></a><a class="btn ghost" href="#our-moments">Our little story</a></div>
+          <div class="scroll">keep scrolling · there's more</div>
+        </div>
+      </header>
+
+      <section id="letter">
+        <div class="section-head"><div class="kicker">from my heart to yours</div><h2>A letter for you</h2><p class="muted">Some things are easier to write when the heart is doing the talking.</p></div>
+        <article class="card letter-card">
+          <h3 class="letter-title">My dearest Basana, my Madam Ji,</h3>
+          <div class="letter-text">If I could choose one place to be right now, it would be beside you. I wish I could see your smile in person, hold your hand, and tell you all of this while looking into your eyes.
+
+Until that day, let this little website carry a piece of my heart to you.
+
+Thank you for being my favourite notification, my safest thought, and the person who makes ordinary days feel special. I don't need every day to be perfect. I just want the chance to make memories with you, learn with you, laugh with you, and keep choosing you.
+
+No distance can make what I feel for you any smaller. ❤️</div>
+          <div class="signature">Always yours, Hrituraj ♡</div>
+        </article>
+      </section>
+
+
+
+      <section>
+        <div class="section-head"><div class="kicker">our story, still being written</div><h2>Things I look forward to</h2></div>
+        <div class="timeline">
+          <div class="card moment"><div class="moment-icon">📱</div><div><strong>More late-night conversations</strong><p>One more story, one more laugh, and a few more minutes before saying goodnight.</p></div></div>
+          <div class="card moment"><div class="moment-icon">🚆</div><div><strong>The day distance feels smaller</strong><p>That first hello in person, the warmest hug, and no screen between us.</p></div></div>
+          <div class="card moment"><div class="moment-icon">🌷</div><div><strong>A thousand ordinary days</strong><p>Doing simple things together and making them feel like our favourite memories.</p></div></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head"><div class="kicker">a message from the developer</div><h2>One little program</h2></div>
+        <div class="card code-card"><div class="terminal-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+          <div class="code"><span class="lav">const</span> myFavouritePerson = <span class="pink">"Basana"</span>;<br>
+          <span class="lav">const</span> myPerson = myFavouritePerson; // my Madam Ji<br><br>
+          <span class="lav">while</span> (life.isRunning) {<br>
+          &nbsp;&nbsp;choose(myPerson);<br>
+          &nbsp;&nbsp;makeMemories();<br>
+          &nbsp;&nbsp;love(myPerson); <span class="pink">// every single day ♡</span><br>
+          }<br><br>
+          <span class="pink">// One question remains...</span><br>
+          <span class="lav">console</span>.log(<span class="pink">"Will you be mine forever?"</span>); <span class="cursor"></span></div>
+        </div>
+      </section>
+
+      <section id="proposal">
+        <div class="card proposal">
+          <div class="big-heart">💗</div>
+          <div class="kicker">this is the part I've been waiting for</div>
+          <h2>Basana, meri Madam Ji,<br><span class="gradient">will you be mine forever?</span></h2>
+          <p class="muted">I can't promise that every day will be perfect, but I can promise to keep showing up, keep caring, and keep choosing you. I want you in all the chapters still waiting to be written.</p>
+          <div class="answer-row"><button class="btn primary yes" id="yesBtn">YES, a thousand times! 💖</button><button class="btn ghost no" id="noBtn">Let me think 🙈</button></div>
+          <div id="response" role="status">You just made my whole world brighter! ❤️ I wish I could be there to hug you right now. Until then, here's the biggest virtual hug. 🫂<br><strong>Yours, Hrituraj.</strong></div>
+        </div>
+      </section>
+    </main>
+    <footer>Made with a little code and a whole lot of love. <span class="tiny-heart">♥</span><br>Hrituraj × Basana (Madam Ji)</footer>
+  </div>
+  <script>
+    const yes=document.getElementById('yesBtn'), no=document.getElementById('noBtn'), response=document.getElementById('response');
+    yes.addEventListener('click',()=>{
+      response.style.display='block'; yes.textContent='You said YES! 💞'; no.style.display='none';
+      for(let i=0;i<90;i++) setTimeout(()=>confetti(),i*18);
+      for(let i=0;i<22;i++) setTimeout(()=>heart(),i*120);
+    });
+    no.addEventListener('click',()=>{
+      no.textContent=['Are you sure? 🥺','One tiny YES? 💗','My heart says YES 😭','Try the pink button 🙈'][Math.floor(Math.random()*4)];
+      no.style.transform=`translate(${Math.random()*28-14}px,${Math.random()*14-7}px)`;
+    });
+    function heart(){const el=document.createElement('div');el.className='heart-float';el.textContent=['♡','♥','💗','💕'][Math.floor(Math.random()*4)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(16+Math.random()*22)+'px';el.style.color=['#ff9fc5','#d0b4ff','#fff'][Math.floor(Math.random()*3)];document.body.appendChild(el);setTimeout(()=>el.remove(),5100)}
+    function confetti(){const el=document.createElement('div');el.className='confetti';el.style.left=Math.random()*100+'vw';el.style.background=['#ff9fc5','#c6adff','#ffe2a8','#fff'][Math.floor(Math.random()*4)];el.style.animationDuration=(2+Math.random()*2)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),4200)}
+    setInterval(heart,1300);
+  </script>
+</body>
+</html>
